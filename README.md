@@ -13,35 +13,6 @@
 
 
 
-## Navigation Menu
-- Full information: https://a11yengineer.com/thing/navigation/
-
-### Navigation Container
-- Description: Can have a heading if there are multiple navigation elements
-- Role: Discoverable by screen reader as navigation landmark
-- Relationships: If using a heading, aria-labelledby="headingId"
-- State: n/a
-- Focus: Can be targeted with a skip link, but isn't focusable
-- Action: n/a
-
-### Links go somewhere
-- Description: Inner text describes purpose
-- Role: Identifies itself as a link
-- Relationships: href="url" makes a link focusable
-- State: visited
-- Focus: All links and dropdowns visibly focused with the tab key / swipe
-- Action: enter
-
-### Buttons do something
-- Description: Inner text describes purpose
-- Role: Identifies itself as a button
-- Relationships: aria-controls="popup-id",  has-popup="true"
-- State: aria-expanded="true/false"
-- Focus: Visibly focused with the tab key / swipe
-- Action: space, enter
-
-
-
 ## Headings
 - Full information: https://a11yengineer.com/thing/headings/
 
@@ -52,10 +23,13 @@
 - State: n/a
 - Focus: Headings generally should not be focusable
 - Action: n/a
+- See Related: [Navigation Menu](#Navigation-Menu)
 
 
 
 ## Button
+
+**Purpose and Style:** Buttons should be used when you navigate the user within the current page or view, submit or reset a form, open a popup or modal, toggle an interface form or introduce other Javascript functionality. Buttons come with default styling and can be furthur modified with CSS to customize the look of different state or action but visually should present as a button. Native elements should **always** be used however, adding the role of button to other elements(links) in order to make them accessible and behave as buttons for accessibility compliance it is acceptable -- but not ideal.
 - Full information: https://a11yengineer.com/thing/button/
 
 ### Success Criteria
@@ -73,6 +47,8 @@
 
 
 ## Link
+
+**Purpose and Style:** Links should be used when you navigate the user to a new page or view, change the URL, cause a browser refresh, internal page jumps. Links should be visually styled as links with 2 ways to differentiate from normal text such as: font weight, decoration, color, using a launch icon recommended if a pop up or new page will be opened, etc.
 - Full information: https://a11yengineer.com/thing/link/
 
 ### Success Criteria
@@ -189,6 +165,34 @@
 - State: none
 - Focus: All controls should be visibly focusable with the keyboard
 - Action: Pause, Play or hide controls operated by tab and spacebar
+
+
+## Navigation Menu
+- Full information: https://a11yengineer.com/thing/navigation/
+
+### Navigation Container
+- Description: Can have a heading if there are multiple navigation elements
+- Role: Discoverable by screen reader as navigation landmark
+- Relationships: If using a heading, aria-labelledby="headingId"
+- State: n/a
+- Focus: Can be targeted with a skip link, but isn't focusable
+- Action: n/a
+
+### Links go somewhere
+- Description: Inner text describes purpose
+- Role: Identifies itself as a link
+- Relationships: href="url" makes a link focusable
+- State: visited
+- Focus: All links and dropdowns visibly focused with the tab key / swipe
+- Action: enter
+
+### Buttons do something
+- Description: Inner text describes purpose
+- Role: Identifies itself as a button
+- Relationships: aria-controls="popup-id",  has-popup="true"
+- State: aria-expanded="true/false"
+- Focus: Visibly focused with the tab key / swipe
+- Action: space, enter
 
 
 
